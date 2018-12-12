@@ -2,7 +2,7 @@
 function ComplexNumber(r = 0, i = 0) {
     this.realPart = r;
     this.imaginaryPart = i;
-    this.plus = function (object) {
+    this.plus = function (object = 0) {
         if (object.constructor == Number) {
             return new ComplexNumber(this.realPart + object, this.imaginaryPart);
         } else if (object.constructor == ComplexNumber) {
@@ -11,7 +11,7 @@ function ComplexNumber(r = 0, i = 0) {
             throw(new TypeError("Invalid object type."));
         };
     };
-    this.minus = function () {
+    this.minus = function (object = 0) {
         if (object.constructor == Number) {
             return new ComplexNumber(this.realPart - object, this.imaginaryPart);
         } else if (object.constructor == ComplexNumber) {
@@ -20,7 +20,7 @@ function ComplexNumber(r = 0, i = 0) {
             throw(new TypeError("Invalid object type."));
         };
     };
-    this.multiply = function () {
+    this.multiply = function (object = 1) {
         if (object.constructor == Number) {
             return new ComplexNumber(this.realPart * object, this.imaginaryPart * object);
         } else if (object.constructor == ComplexNumber) {
@@ -29,7 +29,7 @@ function ComplexNumber(r = 0, i = 0) {
             throw(new TypeError("Invalid object type."));
         };
     };
-    this.divide = function () {
+    this.divide = function (object) {
         
     };
 }
