@@ -24,7 +24,7 @@ function ComplexNumber(r = 0, i = 0) {
         if (object.constructor == Number) {
             return new ComplexNumber(this.realPart * object, this.imaginaryPart * object);
         } else if (object.constructor == ComplexNumber) {
-            return new ComplexNumber(this.realPart * object.realPart + this.imaginaryPart * object.imaginaryPart, this.realPart * object.imaginaryPart + this.imaginaryPart * object.realPart);
+            return new ComplexNumber(this.realPart * object.realPart - this.imaginaryPart * object.imaginaryPart, this.realPart * object.imaginaryPart + this.imaginaryPart * object.realPart);
         } else {
             throw(new TypeError("Invalid object type."));
         };
